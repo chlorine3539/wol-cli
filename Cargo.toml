@@ -1,0 +1,8 @@
+[package]
+name = "wol-cli"
+version = "0.1.0"
+edition = "2024"
+about = "A simple CLI tool wake devices with magic packets"
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }

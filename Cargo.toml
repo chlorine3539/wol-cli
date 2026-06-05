@@ -6,3 +6,4 @@ about = "A simple CLI tool wake devices with magic packets"
 
 [dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
+macaddr = "1.0.1"

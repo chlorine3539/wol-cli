@@ -15,7 +15,13 @@ struct Args {
 }
 
 fn build_magic_packet(mac: [u8; 6]) -> [u8; 102] {
-    todo!()
+    let mut packet = [0u8; 102];
+    packet[..6].fill(0xFF);
+    for i in 0..16 {
+        let offset = 6 + i * 6;
+        packet[offset..offset + 6].copy_from_slice(&mac);
+    }
+    packet
 }
 
 fn main() {
